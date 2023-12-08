@@ -16,11 +16,15 @@ Then you only have it once in your system.
 It's a bit tricky at first to get the Bot token in Slack.
 
 Start by creating a new Slack app in your workspace: https://api.slack.com/apps
+
 You might need the manifest from Buddy, but I don't know exactly.
+
 But just in case, use it from here: https://buddy.works/docs/on-premises/configuration/integrations/slack
+
 
 Afterwards it's important to make sure you add the scope **chat:write.public** to your app in Slack.
 This allows the integration to post to any channel.
+
 Open the section **OAuth & Permissions** and add the scope.
 Then reinstall your app in your Slack workspace.
 
