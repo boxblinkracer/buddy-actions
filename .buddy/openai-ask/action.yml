@@ -1,4 +1,4 @@
-name: "BBR_OpenAI_Ask"
+name: "Ask_OpenAI"
 
 docker_image_name: "osexp2000/ubuntu-with-utils"
 docker_image_tag: "latest"
@@ -15,7 +15,7 @@ execute_commands:
   - prompt=$(echo "$prompt" | sed 's/"//g')
   - prompt=$(echo "$prompt" | iconv -t UTF-8)
   - prompt=$(echo -n "$prompt" | tr -d '\n')
-  - 'response=$(curl -X POST https://api.openai.com/v1/completions -H "Authorization: Bearer $openAiKey" -H "Content-Type: application/json" -d "{ \"model\": \"gpt-3.5-turbo-instruct\", \"prompt\": \"$prompt. please remove hidden and special characters in answer\", \"max_tokens\": 50, \"temperature\": 0.3 }" ) '
+  - 'response=$(curl -X POST https://api.openai.com/v1/completions -H "Authorization: Bearer $openAiKey" -H "Content-Type: application/json" -d "{ \"model\": \"gpt-3.5-turbo-instruct\", \"prompt\": \"prompt instructions: remove hidden and special characters in answer, prompt: $prompt\", \"max_tokens\": 50, \"temperature\": 0.3 }" ) '
   - answer=$(echo "$response" | jq -r '.choices[0].text')
   - answer=$(echo -n "$answer" | tr -d '\n')
   - export OPENAI_ANSWER=$answer
@@ -23,5 +23,5 @@ execute_commands:
 output:
   variables:
     OPENAI_ANSWER:
-      example: "..."
+      example: "Sample answer of OpenAI for your prompt."
       info: "The answer of OpenAI for your prompt"
