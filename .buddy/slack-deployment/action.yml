@@ -1,0 +1,42 @@
+name: "BBR_Slack_Deployment_Notification"
+
+docker_image_name: "osexp2000/ubuntu-with-utils"
+docker_image_tag: "latest"
+
+inputs:
+  slackBotToken:
+    type: PASSWORD
+    required: true
+  channel:
+    type: TEXT
+    required: true
+  status:
+    type: SELECT
+    required: true
+    options:
+      - "Started"
+      - "Success"
+      - "Failed"
+      - "Canceled"
+
+execute_commands:
+  - "btnStylePlaceholder=''"
+  - "failedAction=''"
+
+  - if [ "$status" == "Success" ];
+  - then
+  - "btnStylePlaceholder='\"style\": \"primary\", '"
+  - fi
+
+  - if [ "$status" == "Failed" ];
+  - then
+  - "btnStylePlaceholder='\"style\": \"danger\", '"
+  - "failedAction=', { \"type\": \"mrkdwn\",\"text\": \"*FAILED* - $BUDDY_FAILED_ACTION_NAME\" } '"
+  - fi
+
+  - if [ "$status" == "Canceled" ];
+  - then
+  - "btnStylePlaceholder='\"style\": \"danger\", '"
+  - fi
+
+  - 'curl -X POST "https://slack.com/api/chat.postMessage" -H "Authorization: Bearer $slackBotToken" -H "Content-type: application/json; charset=utf-8" --data "{ \"channel\": \"$channel\",\"blocks\": [ { \"type\": \"divider\" },{ \"type\": \"header\",\"text\": { \"type\": \"plain_text\",\"text\": \"Buddy Deployment\" } },{ \"type\": \"context\",\"elements\": [ { \"type\": \"mrkdwn\",\"text\": \"*PIPELINE* - $BUDDY_PIPELINE_NAME\" }, { \"type\": \"mrkdwn\",\"text\": \"*URL* - $BUDDY_PIPELINE_TARGET_SITE_URL\" }, { \"type\": \"mrkdwn\",\"text\": \"*START* - $BUDDY_EXECUTION_START_DATE\" }, { \"type\": \"mrkdwn\",\"text\": \"*DURATION* - $BUDDY_EXECUTION_TIME s\" }, { \"type\": \"mrkdwn\",\"text\": \"*INVOKER* - $BUDDY_INVOKER_NAME\" }  $failedAction ] },{ \"type\": \"actions\",\"elements\": [ { \"type\": \"button\", $btnStylePlaceholder \"text\": { \"type\": \"plain_text\",\"text\": \"$status\" } } ] } ] }"'
