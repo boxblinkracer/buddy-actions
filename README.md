@@ -13,6 +13,18 @@ If you want to learn more about building your custom actions, please see this pa
 
 # Installation
 
+## Add Github Integration in Buddy
+
+Start by adding a new integration for Github in Buddy.
+The easiest approach to use a **Personal Access Token**.
+Follow the instructions in Buddy, copy the token from Github and enter it in Buddy.
+
+## Clone this repository
+
+To install the custom actions in your Buddy workspace, add a new project in Buddy
+and clonse this repository using your Github integration.
+
+
 Clone this repository in your Buddy workspace.
 
 # Usage
