@@ -3,6 +3,8 @@
 </p>
 <h1 align="center">Custom Actions for Buddy CI/CD</h1>
 
+ ![Build Status](https://github.com/boxblinkracer/buddy-actions/actions/workflows/ci_pipe.yml/badge.svg) 
+
 
 
 This repository contains ready to use **custom actions** for [Buddy](https://buddy.works) that will help you automate pipeline with custom workflows and actions.
