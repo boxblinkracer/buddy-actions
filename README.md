@@ -30,6 +30,12 @@ You can use them in your pipelines just like any other action.
 For more information about each action, please see the README.md in the corresponding folder.
 These README files will also be visible directly inside Buddy.
 
+# Things to consider
+
+Please note that the names of the actions are prefixed with `BBR` for boxblinkracer.
+I did already ask Buddy to implement 2 values for the technical name, as well as for the display name.
+I decided to use the BBR prefix to avoid conflicts with other actions. Unfortuantely this technical name is currently also the display name.
+
 # Reliability
 
 Please note, that I usually try to create high quality products.
