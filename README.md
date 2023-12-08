@@ -5,7 +5,9 @@
 
 
 
-This repository contains ready to use **custom actions** for [Buddy](https://buddy.works) that will help you automate your e-commerce workflow. The actions are based on the [Buddy API](https://buddy.works/docs/api/intro) and [Buddy CLI](https://buddy.works/docs/cli/intro).
+This repository contains ready to use **custom actions** for [Buddy](https://buddy.works) that will help you automate pipeline with custom workflows and actions.
+
+If you want to learn more about building your custom actions, please see this page: https://buddy.works/docs/pipelines/custom-actions
 
 # Installation
 
