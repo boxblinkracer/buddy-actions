@@ -3,9 +3,7 @@
 </p>
 <h1 align="center">Custom Actions for Buddy CI/CD</h1>
 
- ![Build Status](https://github.com/boxblinkracer/buddy-actions/actions/workflows/ci_pipe.yml/badge.svg) 
-
-
+![Build Status](https://github.com/boxblinkracer/buddy-actions/actions/workflows/ci_pipe.yml/badge.svg)
 
 This repository contains ready to use **custom actions** for [Buddy](https://buddy.works) that will help you automate pipeline with custom workflows and actions.
 
@@ -22,15 +20,15 @@ Follow the instructions in Buddy, copy the token from Github and enter it in Bud
 ## Clone this repository
 
 To install the custom actions in your Buddy workspace, add a new project in Buddy
-and clonse this repository using your Github integration.
-
-
-Clone this repository in your Buddy workspace.
+and clone this repository using your Github integration.
 
 # Usage
 
 Once cloned, the custom actions will automatically appear in your **action list**.
 You can use them in your pipelines just like any other action.
+
+For more information about each action, please see the README.md in the corresponding folder.
+These README files will also be visible directly inside Buddy.
 
 # Reliability
 
