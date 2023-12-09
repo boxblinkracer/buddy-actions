@@ -33,6 +33,20 @@ You can use them in your pipelines just like any other action.
 For more information about each action, please see the README.md in the corresponding folder.
 These README files will also be visible directly inside Buddy.
 
+## Use specific version
+
+It's recommended to use a specific version of the custom actions within your pipelines.
+By default, always the "default" branch and therefore the latest (unreleased) version of GIT is used.
+
+You can also use a specific (tagged) version of an action.
+
+Open the pipeline of your project and click on the custom action.
+There you should see a button where you can easily decide which available branch/tag and therefore version you want to use.
+
+<p align="center">
+   <img width="400px" src="/assets/set-version.png">
+</p>
+
 # Things to consider
 
 Please note that the names of the actions are prefixed with `BBR` for boxblinkracer.
