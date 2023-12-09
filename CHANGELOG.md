@@ -3,6 +3,12 @@
 All notable changes of this project are documented in this file
 using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+## [unreleased]
+
+### Added
+
+- Added **display title** to all actions. A good name instead of the technical name is now displayed.
+
 ## [1.0.0]
 
 ### Added
