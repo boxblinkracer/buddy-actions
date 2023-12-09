@@ -1,6 +1,6 @@
 name: "BBR_Slack_Deployment_Notification"
 title: "Slack Deployment Notification"
-category: "CHAT & NOTIFICATIONS"
+category: "CHAT_&_NOTIFICATIONS"
 
 docker_image_name: "osexp2000/ubuntu-with-utils"
 docker_image_tag: "latest"
