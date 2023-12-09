@@ -1,6 +1,6 @@
 name: "BBR_OpenAI_Ask"
 title: "Ask OpenAI"
-category: "STACKS"
+category: "Stacks"
 
 docker_image_name: "osexp2000/ubuntu-with-utils"
 docker_image_tag: "latest"
