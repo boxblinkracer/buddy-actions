@@ -14,8 +14,11 @@ If you want to learn more about building your custom actions, please see this pa
 ## Add Github Integration in Buddy
 
 Start by adding a new integration for Github in Buddy.
-The easiest approach to use a **Personal Access Token**.
-Follow the instructions in Buddy, copy the token from Github and enter it in Buddy.
+The easiest approach to use a **Personal Access Token**, the downside is that updates need to be manually fetched in Buddy.
+
+For a better integration, please create a **Github App** for your Buddy installation
+and configure it accordingly as described here: https://buddy.works/docs/integrations/github/github 
+
 
 ## Clone this repository
 
