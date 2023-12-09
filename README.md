@@ -47,11 +47,6 @@ There you should see a button where you can easily decide which available branch
    <img width="400px" src="/assets/set-version.png">
 </p>
 
-# Things to consider
-
-Please note that the names of the actions are prefixed with `BBR` for boxblinkracer.
-I did already ask Buddy to implement 2 values for the technical name, as well as for the display name.
-I decided to use the BBR prefix to avoid conflicts with other actions. Unfortuantely this technical name is currently also the display name.
 
 # Reliability
 
