@@ -1,6 +1,6 @@
 ## Instructions
 
-This action allows you to automatically send deployment notifications to a Slack channel.
+This action allows you to automatically send deployment notifications to a Slack channel of your team.
 It also sends additional metadata.
 
 The only thing you need to provide is the **Slack Bot Token**, the **Slack Channel** and the **Status** (Started, Success, Failed, Canceled).
