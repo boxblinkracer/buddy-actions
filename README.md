@@ -5,7 +5,7 @@
 
 ![Build Status](https://github.com/boxblinkracer/buddy-actions/actions/workflows/ci_pipe.yml/badge.svg)
 
-This repository contains ready to use **custom actions** for [Buddy](https://buddy.works) that will help you automate pipeline with custom workflows and actions.
+This repository contains ready to use **custom actions** for [Buddy](https://buddy.works) that will help you to automate your pipelines with custom workflows and actions.
 
 If you want to learn more about building your custom actions, please see this page: https://buddy.works/docs/pipelines/custom-actions
 
