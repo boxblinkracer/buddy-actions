@@ -1,5 +1,5 @@
 name: "BBR_OpenAI_Image"
-title: "Create OpenAI Image"
+title: "Create Image"
 category: "Stacks"
 
 docker_image_name: "osexp2000/ubuntu-with-utils"
@@ -26,7 +26,7 @@ execute_commands:
   - prompt=$(echo "$prompt" | iconv -t UTF-8)
   - prompt=$(echo -n "$prompt" | tr -d '\n')
 
-  - 'response=$(curl -X POST https://api.openai.com/v1/images -H "Authorization: Bearer $openAiKey" -H "Content-Type: application/json" -d "{ \"prompt\": \"$prompt\" }" ) '
+  - 'response=$(curl -X POST https://api.openai.com/v1/images/generations -H "Authorization: Bearer $openAiKey" -H "Content-Type: application/json" -d "{ \"prompt\": \"$prompt\" }" ) '
 
   - error=$(echo "$response" | jq -r '.error.message')
 
