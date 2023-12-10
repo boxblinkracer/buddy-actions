@@ -17,11 +17,10 @@ inputs:
     required: true
     default: "gpt-3.5-turbo-instruct"
     options:
+      - "gpt-4"
       - "gpt-3.5-turbo-instruct"
-      - "gpt-3.5-turbo-16k"
       - "text-davinci-003"
       - "text-davinci-002"
-      - "code-davinci-002"
 
 execute_commands:
   - prompt=$(echo "$prompt" | sed 's/"//g')
