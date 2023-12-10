@@ -12,13 +12,23 @@ inputs:
   openAiKey:
     type: PASSWORD
     required: true
+  openAiModel:
+    type: SELECT
+    required: true
+    default: "gpt-3.5-turbo-instruct"
+    options:
+      - "gpt-3.5-turbo-instruct"
+      - "gpt-3.5-turbo-16k"
+      - "text-davinci-003"
+      - "text-davinci-002"
+      - "code-davinci-002"
 
 execute_commands:
   - prompt=$(echo "$prompt" | sed 's/"//g')
   - prompt=$(echo "$prompt" | iconv -t UTF-8)
   - prompt=$(echo -n "$prompt" | tr -d '\n')
 
-  - 'response=$(curl -X POST https://api.openai.com/v1/completions -H "Authorization: Bearer $openAiKey" -H "Content-Type: application/json" -d "{ \"model\": \"gpt-3.5-turbo-instruct\", \"prompt\": \"prompt instructions: remove hidden and special characters in answer, prompt: $prompt\", \"max_tokens\": 50, \"temperature\": 0.3 }" ) '
+  - 'response=$(curl -X POST https://api.openai.com/v1/completions -H "Authorization: Bearer $openAiKey" -H "Content-Type: application/json" -d "{ \"model\": \"$openAiModel\", \"prompt\": \"prompt instructions: remove hidden and special characters in answer, prompt: $prompt\", \"max_tokens\": 50, \"temperature\": 0.3 }" ) '
 
   - error=$(echo "$response" | jq -r '.error.message')
 
