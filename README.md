@@ -9,6 +9,14 @@ This repository contains ready to use **custom actions** for [Buddy](https://bud
 
 If you want to learn more about building your custom actions, please see this page: https://buddy.works/docs/pipelines/custom-actions
 
+# Actions
+
+Here is the list of included actions:
+
+* **Ask OpenAI**: Provide a prompt and use the answer in your subsequent pipeline actions
+* **Create AI Image**: Create an image using OpenAI and a custom prompt, and use the generated image ULR in your pipeline
+* **Slack Deployment Notification**: Easily send out deployment notifications (started, success, failure, canceled) to your Slack team
+
 # Installation
 
 ## Add Github Integration in Buddy
