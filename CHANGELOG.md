@@ -7,6 +7,7 @@ using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
 ### Added
 
+- Added new action **Create OpenAI Image** to automatically generate images using AI.
 - Added **display title** to all actions. A good name instead of the technical name is now displayed.
 - Added selection of **models** to the OpenAI action. This allows you to select the model you want to use.
 
