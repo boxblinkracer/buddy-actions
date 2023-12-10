@@ -22,7 +22,7 @@ execute_commands:
 
   - error=$(echo "$response" | jq -r '.error.message')
 
-  - if [ "$error" == null ];
+  - if [ "$error" != null ];
   - then
   - 'echo "OpenAI Error Response: $error"'
   - exit 1
