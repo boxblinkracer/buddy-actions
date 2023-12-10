@@ -9,9 +9,14 @@ using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
 - Added **display title** to all actions. A good name instead of the technical name is now displayed.
 
+### Fixed
+
+- The Buddy action **Ask OpenAI** will now correctly fail if OpenAI returns an error.
+
 ## [1.0.0]
 
 ### Added
 
 - Add new action "Ask OpenAI" to ask for a prompt. The result can then be used in the pipeline.
-- Add new action "Deployment Slack" notifications. This allows to send deployment notifications to your team in Slack when deployments start, succeed, fail or are canceled.
+- Add new action "Deployment Slack" notifications. This allows to send deployment notifications to your team in Slack
+  when deployments start, succeed, fail or are canceled.
