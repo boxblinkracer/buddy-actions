@@ -24,7 +24,7 @@ execute_commands:
 
   - if [ -z "$error" ]
   - then
-  - echo "OpenAI Error Response: $error"
+  - 'echo "OpenAI Error Response: $error"'
   - exit 1
   - fi
 
