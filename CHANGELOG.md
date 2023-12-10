@@ -3,7 +3,7 @@
 All notable changes of this project are documented in this file
 using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
-## [unreleased]
+## [1.1.0]
 
 ### Added
 
