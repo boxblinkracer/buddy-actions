@@ -3,6 +3,10 @@
 All notable changes of this project are documented in this file
 using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+## [unreleased]
+
+- Update the **categories** of the actions. (I now know where they are displayed and it was wrong).
+
 ## [1.1.0]
 
 ### Added
