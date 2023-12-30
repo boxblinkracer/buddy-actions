@@ -5,7 +5,10 @@ using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
 ## [unreleased]
 
+### Changed
+
 - Update the **categories** of the actions. (I now know where they are displayed and it was wrong).
+- Increased max. tokens of OpenAI action to be 500 to avoid truncation of results.
 
 ## [1.1.0]
 

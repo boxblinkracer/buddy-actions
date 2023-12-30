@@ -26,7 +26,7 @@ execute_commands:
   - prompt=$(echo "$prompt" | iconv -t UTF-8)
   - prompt=$(echo -n "$prompt" | tr -d '\n')
 
-  - 'response=$(curl -X POST https://api.openai.com/v1/completions -H "Authorization: Bearer $openAiKey" -H "Content-Type: application/json" -d "{ \"model\": \"$openAiModel\", \"prompt\": \"prompt instructions: remove hidden and special characters in answer, prompt: $prompt\", \"max_tokens\": 50, \"temperature\": 0.3 }" ) '
+  - 'response=$(curl -X POST https://api.openai.com/v1/completions -H "Authorization: Bearer $openAiKey" -H "Content-Type: application/json" -d "{ \"model\": \"$openAiModel\", \"prompt\": \"prompt instructions: remove hidden and special characters in answer, prompt: $prompt\", \"max_tokens\": 500, \"temperature\": 0.3 }" ) '
 
   - error=$(echo "$response" | jq -r '.error.message')
 
